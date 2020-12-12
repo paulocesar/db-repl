@@ -12,7 +12,7 @@ $> echo "module.exports = [{client:'mssql',connection:{host:'127.0.0.1',user:'yo
 $> knext-repl
 
 ø> #your_database_user SELECT 1 AS a, 2 AS b
-=== CentralDB ===
+=== your_database_user ===
 
  # a  b
 -- -- --
@@ -21,7 +21,7 @@ true
 
 ø> @csv SELECT 1 AS a, 2 AS b
 Changing currentFormat to csv
-=== CentralDB ===
+=== your_database_user ===
 
 "a","b"
 "1","2"
@@ -29,7 +29,7 @@ true
 
 ø> @md SELECT 1 AS a, 2 AS b
 Changing currentFormat to md
-### CentralDB
+### your_database_user
 
 a | b
 :-- | :--
@@ -37,12 +37,12 @@ a | b
 true
 
 ø> SELECT 1 AS a, 2 AS b; SELECT 4 AS c, 5 AS d
-### CentralDB
+### your_database_user
 
 a | b
 :-- | :--
 1 | 2
-### CentralDB
+### your_database_user
 
 c | d
 :-- | :--
@@ -59,7 +59,7 @@ true
 
 ø> SELECT 1 AS a, 2 AS b
 Changing currentFormat to json
-/* === CentralDB === */
+/* === db2 === */
 [
     {
         "a": 1,
@@ -69,7 +69,7 @@ Changing currentFormat to json
 true
 
 ø> @visual SELECT 1 test1, 2 test2, 3 test3, 4 test4, 5 test5, 6 test6, 7 test7, 8 test8, 9 test9, 10 test10, 11 test11, 12 test12, 13 test13, 14 test14, 15 test15
-=== CentralDB ===
+=== db2 ===
 
  # test1 test2 test3 test4 test5 test6 test7 test8 test9 test10
 -- ----- ----- ----- ----- ----- ----- ----- ----- ----- ------
