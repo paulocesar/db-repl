@@ -1,0 +1,19 @@
+{
+  "name": "knex-repl",
+  "version": "0.2.0",
+  "description": "sql repl based on knex",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paulo Cesar <metasoft.brasil@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "knex": "^0.21.12",
+    "mssql": "^6.2.3",
+    "mysql": "^2.18.1",
+    "oracledb": "^5.1.0",
+    "pg": "^8.5.1",
+    "sqlite3": "^5.0.0"
+  }
+}
