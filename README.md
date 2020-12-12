@@ -2,7 +2,8 @@
 
 ## Installation
 - install `npm install -g knex-repl`
-- create an array of knex configs in your `$HOME/.knex-repl.js`
+- create an array of knex configs in your `$HOME/.knex-repl.js` please visit https://knexjs.org
+- exit: `CTRC-C` x 2
 
 ## Examples
 ```bash
