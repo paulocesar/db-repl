@@ -1,5 +1,5 @@
 {
-  "name": "knex-repl",
+  "name": "db-repl",
   "version": "0.2.0",
   "description": "sql repl based on knex",
   "main": "index.js",
@@ -15,5 +15,20 @@
     "oracledb": "^5.1.0",
     "pg": "^8.5.1",
     "sqlite3": "^5.0.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulocesar/knex-repl.git"
+  },
+  "keywords": [
+    "repl",
+    "database",
+    "knex",
+    "sql"
+  ],
+  "bugs": {
+    "url": "https://github.com/paulocesar/knex-repl/issues"
+  },
+  "homepage": "https://github.com/paulocesar/knex-repl#readme"
 }
