@@ -19,7 +19,7 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/paulocesar/knex-repl.git"
+    "url": "git+https://github.com/paulocesar/db-repl.git"
   },
   "keywords": [
     "repl",
@@ -28,7 +28,7 @@
     "sql"
   ],
   "bugs": {
-    "url": "https://github.com/paulocesar/knex-repl/issues"
+    "url": "https://github.com/paulocesar/db-repl/issues"
   },
-  "homepage": "https://github.com/paulocesar/knex-repl#readme"
+  "homepage": "https://github.com/paulocesar/db-repl#readme"
 }
