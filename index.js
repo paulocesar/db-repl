@@ -3,7 +3,7 @@ const path = require('path');
 const repl = require('repl');
 const knex = require('knex');
 const { callbackify } = require('util');
-const dbConfigs = [].concat(require(path.resolve(os.homedir(), '.knex-repl')));
+const dbConfigs = [].concat(require(path.resolve(os.homedir(), '.db-repl')));
 
 class KnexRunner {
     constructor(dbConfigs) {
@@ -35,24 +35,30 @@ class KnexRunner {
 
         const queries = [ ];
 
-        const extractFirstTerm = (cmd, field, match) => {
+        const extractFirstTerm = (cmd, field, match, validate) => {
             if (cmd[0] !== match) { return cmd; }
 
             const terms = cmd.split(/\s+/);
             const newTerm = terms.shift().replace(match, '');
             const oldTerm = this[field];
 
+            if (validate && !validate(newTerm)) {
+                console.log(`'${newTerm}' is an invalid ${field}`);
+                return '';
+            }
+
             if (newTerm != oldTerm) {
                 console.log(`Changing ${field} to ${newTerm}`);
                 this[field] = newTerm;
             }
 
-            return terms.join(' ');
+            return terms.join(' ').trim();
         }
 
         for (const cmd of commands) {
             let query = extractFirstTerm(cmd, 'currentFormat', '@');
-            query = extractFirstTerm(query, 'currentDb', '#');
+            query = extractFirstTerm(query, 'currentDb', '#',
+                (t) => Boolean(this.dbsByName[t]));
 
             // if format is after db definition
             query = extractFirstTerm(query, 'currentFormat', '@');

@@ -1,15 +1,24 @@
-# knex-repl
+# db-repl
+
+- run queries in MSSQL, PostgreSQL, MySQL, MariaDB, SQLite3
+- visualize columns on terminals
+- format to CSV, Markdown, JSON
+
+Instructions
+- set database names with `#` (example: `#db1 SELECT * FROM tbl1`)
+- set formats with `@` (example: `@csv SELECT * FROM tbl1`)
+- available formats `@visual`, `@csv`, `@md`, `@json`
 
 ## Installation
-- install `npm install -g knex-repl`
-- create an array of knex configs in your `$HOME/.knex-repl.js` please visit https://knexjs.org
+- install `npm install -g db-repl`
+- create an array of knex configs in your `$HOME/.db-repl.js` please visit https://knexjs.org
 - exit: `CTRC-C` x 2
 
 ## Examples
 ```bash
-$> echo "module.exports = [{client:'mssql',connection:{host:'127.0.0.1',user:'your_database_user',password:'your_database_password',database:'myapp_test'}}];" > $HOME/.knex-repl.js
+$> echo "module.exports = [{client:'mssql',connection:{host:'127.0.0.1',user:'your_database_user',password:'your_database_password',database:'myapp_test'}}];" > $HOME/.db-repl.js
 
-$> knext-repl
+$> db-repl
 
 ø> #your_database_user SELECT 1 AS a, 2 AS b
 === your_database_user ===
